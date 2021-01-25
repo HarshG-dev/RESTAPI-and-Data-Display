@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Define title-->
+    <title>User Monthly Bank Statements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <!--You can load all the css files here -->
+    <link rel="stylesheet" type="text/css" href="css/select.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+<!--HTML content goes here-->
+
+
+<nav class="app-nav">
+    <h1 class="app-title">Monthly Statements</h1>
+</nav>
+
+<div class="content">
+    <section class="flex select-form-container" id="filter-view">
+        <div class="select user">
+            <select id="user-select">
+                <option selected disabled value="-1">Select User</option>
+				<option value="-1">All</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+            </select>
+        </div>
+		<div class="select country">
+                <select id="country-select">
+					<!--
+                    Extractly the JSON data object for all the Countries. 
+					-->
+                </select>
+            </div>
+
+            <button type="submit" id="submit-btn">
+                Show
+            </button>
+		
+    </section>
+
+    <div id="loader-view">
+        <section class="loader-container">
+            <span class="loader"></span>
+        </section>
+    </div>
+
+    <section id="statements-view">
+        <div class="user-information">
+            <table>
+                <tr>
+                    <td id="user-name"></td>
+                    <td id="user-balance"></td>
+                     <td id="picture"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="monthly-statements">
+
+        </div>
+    </section>
+</div>
+
+<!--You can load all the javascript files here-->
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
