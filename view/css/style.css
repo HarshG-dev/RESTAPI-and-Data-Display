@@ -152,7 +152,7 @@ button.disabled {
     justify-content: space-between;
 }
 
-table {
+.data_container {
     flex-basis: 100%;
     align-items: center;
     justify-content: center;
@@ -160,30 +160,28 @@ table {
     border: 1px solid #999;
     border-radius: 10px;
 }
+.sub_cont {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
 p {
     border-bottom: 1px solid #999;
     height: 50px;
     padding-bottom: 10px;
+    font-size: 20px;
+}
+p:last-child {
+    border: 0;
+    padding: 0;
 }
 #user-name,
 #user-balance,
 .monthly-balance {
     font-family: Avenir, Verdana, Arial, Helvetica, sans-serif;
-}
-
-#user-name {
+    width: 47%;
     font-weight: 600;
-    font-size: 20px;
     color: #262b32;
-    width: 40%;
-}
-
-
-#user-balance, #picture {
-    font-weight: 600;
-    font-size: 20px;
-    color: #262b32;
-    width: 40%;
 }
 
 #monthly-statements {
@@ -246,14 +244,48 @@ p {
 .monthly-credit {
     color: #006938;
 }
-
+@media (min-width: 300px) and (max-width: 490px) {
+    .data_container {
+        margin: 0%;
+    }
+    #user-name, #user-balance, .monthly-balance {
+        width: 40%;
+    }
+    p{
+        font-size: 14px;
+    }
+    .select-form-container {
+        max-width: 100%;
+    }
+    .flex{
+        flex-flow: wrap;
+    }
+}
 @media (min-width: 500px) and (max-width: 850px) {
     .select-form-container {
         max-width: 80%;
         margin: 0;
     }
-    table {
+    .data_container {
         margin: 0;
     }
+    #user-name, #user-balance, .monthly-balance {
+        width: 44%;
+    }
 }
-
+@media (min-width: 851px) and (max-width: 1200px) {
+    .data_container {
+        margin: 0% 10%;
+    }
+    #user-name, #user-balance, .monthly-balance {
+        width: 45%;
+    }
+}
+@media (min-width: 1201px) and (max-width: 1484px) {
+    .data_container {
+        margin: 0% 10%;
+    }
+    #user-name, #user-balance, .monthly-balance {
+        width: 46%;
+    }
+}
