@@ -105,7 +105,8 @@ button.disabled {
     align-self: center;
     flex: 1 1 100%;
     font-weight: bold;
-    max-width: 30%;
+    max-width: 100%;
+    text-align: center;
 }
 
 .autocomplete {
@@ -155,7 +156,7 @@ table {
     flex-basis: 100%;
     align-items: center;
     justify-content: center;
-    margin: 0% 25%;
+    margin: 0% 20%;
     border: 1px solid #999;
     border-radius: 10px;
 }
@@ -246,5 +247,13 @@ p {
     color: #006938;
 }
 
-
+@media (min-width: 500px) and (max-width: 850px) {
+    .select-form-container {
+        max-width: 80%;
+        margin: 0;
+    }
+    table {
+        margin: 0;
+    }
+}
 
